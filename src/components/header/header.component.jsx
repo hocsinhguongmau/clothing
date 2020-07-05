@@ -21,15 +21,13 @@ const Header = ({ currentUser, hidden }) => (
       <styles.OptionLink to="/shop">SHOP</styles.OptionLink>
       <styles.OptionLink to="/contact">CONTACT</styles.OptionLink>
       {currentUser ? (
-        <styles.HeaderContainer>
-          <styles.OptionLink
-            as="div"
-            className="option"
-            onClick={() => auth.signOut()}
-          >
-            SIGN OUT
-          </styles.OptionLink>
-        </styles.HeaderContainer>
+        <styles.OptionLink
+          as="div"
+          className="option"
+          onClick={() => auth.signOut()}
+        >
+          SIGN OUT
+        </styles.OptionLink>
       ) : (
         <styles.OptionLink to="/signin">SIGN IN</styles.OptionLink>
       )}
