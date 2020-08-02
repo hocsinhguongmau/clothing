@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CollectionPreviewContainer = styled.div`
   display: flex;
@@ -6,11 +6,14 @@ export const CollectionPreviewContainer = styled.div`
   margin-bottom: 30px;
 `;
 
-export const TitleContainer = styled.div`
+export const TitleContainer = styled.h1`
   font-size: 28px;
   margin-bottom: 25px;
-  text-decoration: uppercase;
   cursor: pointer;
+
+  &:hover {
+    color: grey;
+  }
 `;
 
 export const PreviewContainer = styled.div`

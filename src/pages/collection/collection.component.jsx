@@ -1,22 +1,27 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { selectCollection } from "../../redux/shop/shop.selectors";
 import CollectionItem from "../../components/collection-item/collection-item.component";
 
-import * as styles from "./collection.styles";
+import { selectCollection } from "../../redux/shop/shop.selectors";
+
+import {
+  CollectionPageContainer,
+  CollectionTitle,
+  CollectionItemsContainer
+} from "./collection.styles";
 
 const CollectionPage = ({ collection }) => {
   const { title, items } = collection;
   return (
-    <styles.CollectionPageContainer>
-      <styles.TitleContainer as="h1">{title}</styles.TitleContainer>
-      <styles.ItemsContainer>
+    <CollectionPageContainer>
+      <CollectionTitle>{title}</CollectionTitle>
+      <CollectionItemsContainer>
         {items.map((item) => (
           <CollectionItem key={item.id} item={item} />
         ))}
-      </styles.ItemsContainer>
-    </styles.CollectionPageContainer>
+      </CollectionItemsContainer>
+    </CollectionPageContainer>
   );
 };
 
